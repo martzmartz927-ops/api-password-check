@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="card" id="loginCard">
+      <h1>Вход в админку</h1>
+      <p>Введите пароль администратора.</p>
+      <div class="row">
+        <input id="adminPass" type="password" placeholder="Пароль" autocomplete="off" />
+        <button id="loginBtn">Войти</button>
+      </div>
+      <div class="msg" id="loginMsg"></div>
+    </section>
+
+    <section class="card hidden" id="panelCard">
+      <div class="topbar">
+        <div>
+          <h1>Админка</h1>
+          <p>Ключи, скрипты и привязка.</p>
+        </div>
+        <button id="logoutBtn" class="secondary">Выйти</button>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h2>Добавить ключ</h2>
+          <div class="row">
+            <input id="newKey" type="text" placeholder="Новый ключ" autocomplete="off" />
+            <button id="addKeyBtn">Добавить</button>
+          </div>
+          <div class="msg" id="addMsg"></div>
+        </div>
+
+        <div class="box">
+          <h2>Привязать скрипт</h2>
+          <p class="small">Нажми кнопку, введи ключ, затем появится поле для скрипта.</p>
+          <div class="row">
+            <button id="bindBtn">Привязать скрипт</button>
+            <button id="refreshBtn" class="secondary">Обновить список</button>
+          </div>
+          <div class="msg" id="bindMsg"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Список ключей</h2>
+        <div id="keysList" class="keys"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
